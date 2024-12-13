@@ -1,0 +1,40 @@
+name: New Request 
+description: Request new feature
+title: "Feature: "
+body:
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: What is your name?
+      placeholder: ex. Serta Taweewattana
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: dropdown
+    id: request
+    attributes:
+      label: Type of request?
+      description: Select the type of your request
+      options:
+        - New Feature
+      default: 0
+  - type: dropdown
+    id: os
+    attributes:
+      label: What is the OS which you want to suggest?
+      multiple: true
+      options:
+        - MacOS
+        - Window
+        - Linux
+  - type: textarea
+    id: detail
+    attributes:
+      label: What are the details of your suggestion?
+      description: Explain what do you want
+      placeholder: Feature details!
+      render: shell
